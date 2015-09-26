@@ -361,6 +361,17 @@ function installLinux(type) {
  *
  */
 
+function drink(type) {
+  if (!beers[type])
+    return false;
+  str = 'This ' + type + ' is ';
+  var vals = Array.isArray(beers[type]) ? beers[type] : [beers[type]];
+  for (var i = 0; i < vals.length; i++) {
+    str += vals[i];
+    str += i === vals.length ? '.' : ' and ';
+  }
+  return str;
+}
 
 /* Step 24
  *
