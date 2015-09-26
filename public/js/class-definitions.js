@@ -118,6 +118,11 @@ var princess_leia = {
  *
  */
 
+var domains = {};
+domains['ycombinator.com'] = "198.41.190.47",
+domains['laughingsquid.com'] = "162.159.247.97",
+domains['slumlordhosting.com'] = "198.61.179.126",
+domains['jsonformatter.curiousconcept.com'] = "104.28.5.70";
 
 /* Step 12
  *
