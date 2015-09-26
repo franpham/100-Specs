@@ -635,16 +635,16 @@ function PrincessLeia(name, money, age, gender) {
   Person.call(this, name, money, age, gender);
   this.isInTrouble = null;
   this.shootsGun = function() {
-  this.isInTrouble = false;
-  return "Leia shoots her gun wildly";
+    this.isInTrouble = false;
+    return "Leia shoots her gun wildly";
   };
   this.getsInTrouble = function() {
-  this.isInTrouble = true;
-  return "Help me Obi-wan Kenobi, you're my only hope";
+    this.isInTrouble = true;
+    return "Help me Obi-wan Kenobi, you're my only hope";
   };
   this.marries = function(name) {
-  return name === 'Luke Skywalker' ? 'Gross!' :
-    name === 'Han Solo';
+    return name === 'Luke Skywalker' ? 'Gross!' :
+      name === 'Han Solo';
   };
 }
 PrincessLeia.prototype = Object.create(Person.prototype);
@@ -677,7 +677,6 @@ Stapler.prototype.staplePapers = function(papers) {
 };
 
 /* Step 35
- *
  * Define a class named "Scientist" that extends the Person Class that takes
  * name, money, age, and gender as well as new instance properties
  * "disciplines" and "discoveries" which initializes as empty arrays.
@@ -712,9 +711,35 @@ Stapler.prototype.staplePapers = function(papers) {
  *   addDiscipline
  *   checkDiscipline
  *   addDiscovery
- *
  */
 
+function Scientist(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.disciplines = [];
+  this.discoveries = [];
+}
+Scientist.prototype = Object.create(Person.prototype);
+Scientist.prototype.constructor = Scientist;
+
+Scientist.prototype.addDiscipline = function(str) {
+  this.disciplines.push(str);
+  return this.disciplines;
+};
+Scientist.prototype.checkDiscipline = function(str) {
+  return this.disciplines.indexOf(str) !== -1;
+};
+Scientist.prototype.addDiscovery = function(dis) {
+  this.discoveries.push(dis);
+  var str = 'I discovered ';
+  for (var i = 0; i < this.discoveries.length; i++) {
+    if (i === this.discoveries.length - 1 && this.discoveries.length > 2)
+      str += 'and ';
+    str += this.discoveries[i];
+    str += i === this.discoveries.length - 1 ? '.' :
+      (i === 0 && this.discoveries.length === 2) ? ' and ' : ', ';
+  }
+  return str;
+};
 
 /* Step 36
  *
