@@ -621,7 +621,6 @@ SolarSystem.prototype.removePlanet = function(obj) {
  * In the 'marries' method - Add a message of disapproval for "Luke Skywalker"
  * "Gross!"
  *
- *
  * class
  *   PrincessLeia
  * properties
@@ -630,9 +629,26 @@ SolarSystem.prototype.removePlanet = function(obj) {
  *   shootsGun
  *   getsInTrouble
  *   marries
- *
  */
 
+function PrincessLeia(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.isInTrouble = null;
+  this.shootsGun = function() {
+  this.isInTrouble = false;
+  return "Leia shoots her gun wildly";
+  };
+  this.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope";
+  };
+  this.marries = function(name) {
+  return name === 'Luke Skywalker' ? 'Gross!' :
+    name === 'Han Solo';
+  };
+}
+PrincessLeia.prototype = Object.create(Person.prototype);
+PrincessLeia.prototype.constructor = PrincessLeia;
 
 /* Step 34
  *

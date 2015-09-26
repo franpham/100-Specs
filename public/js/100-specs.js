@@ -723,7 +723,7 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("should be an instance of the PrincessLeia Class",function() {
 			var leia = new PrincessLeia('Leia', 1000, 20, 'female');
 			js.expect.E.expect(leia).to.be.a(PrincessLeia);
-			js.expect.E.expect(Reflect.fields(leia)).to.have.length(5);
+			js.expect.E.expect(Reflect.fields(leia)).to.have.length(8);
 			js.expect.E.expect(leia).to.key("name");
 			js.expect.E.expect(leia.name).to.be.a("string");
 			js.expect.E.expect(leia).to.key("money");
