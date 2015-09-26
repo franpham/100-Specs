@@ -668,6 +668,13 @@ PrincessLeia.prototype.constructor = PrincessLeia;
  *
  */
 
+function Stapler(color, papers) {
+  this.color = color;
+  this.maxPapers = papers;
+}
+Stapler.prototype.staplePapers = function(papers) {
+  return papers <= this.maxPapers;
+};
 
 /* Step 35
  *
