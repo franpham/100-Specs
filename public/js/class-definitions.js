@@ -482,6 +482,9 @@ Person.prototype.earnMoney = function(money) {
  *
  */
 
+function purchaseLaptop(laptop) {
+  return !laptopCosts[laptop] ? -1 : laptopCosts[laptop] + '';
+}
 
 /* Step 29
  *
