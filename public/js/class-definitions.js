@@ -385,6 +385,9 @@ function drink(type) {
  *
  */
 
+function browseURL(name) {
+  return browsers[name] ? browsers[name] : false;
+}
 
 /* Step 25
  *
