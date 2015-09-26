@@ -498,6 +498,9 @@ function purchaseLaptop(laptop) {
  *
  */
 
+function canTalkAbout(name) {
+  return name !== club_name;
+}
 
 /* Step 30
  *
@@ -520,6 +523,12 @@ function purchaseLaptop(laptop) {
  *
  */
 
+function Pen(color) {
+  this.color = color;
+}
+Pen.prototype.write = function(message) {
+  return this.color + ': ' + message;
+};
 
 /* Step 31
  *
