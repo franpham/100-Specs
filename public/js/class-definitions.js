@@ -32,6 +32,7 @@ var sahara_animal = 'The Addax';
 
 var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter',
   'Saturn', 'Uranus', 'Neptune'];
+
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
@@ -40,6 +41,7 @@ var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter',
  *
  */
 
+var galilean_moons = ['Io', 'Europa', 'Ganymede', 'Callisto'];
 
 /* Step 6 φ
  *
