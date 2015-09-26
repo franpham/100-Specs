@@ -428,6 +428,10 @@ function listLivingOrgClass() {
  *
  */
 
+function favoritePlanet(obj) {
+  return planets.indexOf(obj) === -1 ? obj + ' is not a planet!' :
+    "I'm from " + obj + ", but I wish I could go to Earth.";
+}
 
 /* Step 27
  *
