@@ -546,17 +546,27 @@ Pen.prototype.write = function(message) {
  *
  * class
  *   Garden
- *
  * properties
  *   @param {Number} plantsTotal
  *   @property {Bool:Not Passed as Argument - Default Value FALSE} isWatered
- *
  * methods
  *   water
  *   grow
  *
  */
-
+function Garden(plants, watered) {
+  this.plantsTotal = plants;
+  this.isWatered = watered ? watered : false;
+}
+Garden.prototype.water = function() {
+  this.isWatered = true;
+};
+Garden.prototype.grow = function() {
+  if (this.isWatered)
+    this.plantsTotal++;
+  else
+    return false;
+};
 
 /* Step 32
  *
