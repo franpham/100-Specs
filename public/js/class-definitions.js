@@ -584,7 +584,21 @@ Garden.prototype.grow = function() {
  *   removePlanet
  *
  */
-
+function SolarSystem() {
+  this.planets = [];
+}
+SolarSystem.prototype.addPlanet = function(obj) {
+  this.planets.push(obj);
+};
+SolarSystem.prototype.removePlanet = function(obj) {
+  if (obj === undefined)
+    this.planets.pop();
+  else {
+    var index = this.planets.indexOf(obj);
+    if (index >= 0)
+      this.planets.splice(index, 1);
+  }
+};
 
 /* Step 33
  *
